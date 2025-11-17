@@ -1,4 +1,4 @@
-url = "https://github.com/rocksdanister/lively/wiki/Machine-Learning"
+url = "https://code.visualstudio.com/docs/sourcecontrol/overview"
 tdl_hint = [".com", ".ir", ".net", ".org", ".co"]
 parts = url.split("://", 1)
 rest_of_url = parts[1]
