@@ -234,6 +234,33 @@
         "documentation": {}
     },
     {
+        "label": "a_list",
+        "kind": 5,
+        "importPath": "E1.P17.Main",
+        "description": "E1.P17.Main",
+        "peekOfCode": "a_list = [\"1\", \"2\", \"3\", \"4\"]\nb_list = [\"2\", \"3\"]\nresult = []\nfor current_index in a_list:\n    if a_list[] ==",
+        "detail": "E1.P17.Main",
+        "documentation": {}
+    },
+    {
+        "label": "b_list",
+        "kind": 5,
+        "importPath": "E1.P17.Main",
+        "description": "E1.P17.Main",
+        "peekOfCode": "b_list = [\"2\", \"3\"]\nresult = []\nfor current_index in a_list:\n    if a_list[] ==",
+        "detail": "E1.P17.Main",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "E1.P17.Main",
+        "description": "E1.P17.Main",
+        "peekOfCode": "result = []\nfor current_index in a_list:\n    if a_list[] ==",
+        "detail": "E1.P17.Main",
+        "documentation": {}
+    },
+    {
         "label": "shomarande",
         "kind": 2,
         "importPath": "E1.P2.main",
