@@ -19,12 +19,11 @@ def calc_sum(number, k):
 memory = []
 for_array = [3, 5, 15]
 input_number = int(input("Give me a number : "))
-# base = int(input("Give me a base for number : "))
 valid_number = validator(input_number)
 i = 0
 for base in for_array:
     final_sum, array_mk = calc_sum(valid_number, for_array[i])
-    print("-"*30)
+    print("-" * 30)
     print(f"For [ {valid_number} ] arrau is {array_mk} and a sum ofthem is {final_sum}")
     memory.insert(i, final_sum)
     i += 1
