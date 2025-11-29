@@ -9,7 +9,7 @@ time_s = moz
 y = time_s // 365 * 24 * 3600
 time_s = time_s % 365 * 24 * 3600
 # print(time_s)
-if time_s > 24 * 3600:
+# if time_s > 24 * 3600:
 d = time_s // 86400
 time_s = time_s % 24 * 3600
 # print(time_s)

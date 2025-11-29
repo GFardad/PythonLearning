@@ -1,16 +1,29 @@
-def zarb(x):
-    x = str(x)
-    if (len(x)==1):
-        return(x)
-    else :
-        x_list = []
-        for i in range(len(x)):
-            x_list.append(x[i])
+def colats_core(x):
+    xl = x
+    i = 0
 
-        for i in range(len(x) - 1):
-            z = int(x_list[i]) * int(x_list[i + 1])
-    return zarb(z)
+    while xl != 1:
+        if xl % 2 == 1:
+            xl = xl * 3 + 1
+            print(xl)
+        elif xl % 2 == 0:
+            xl = xl // 2
+            print(xl)
+        i += 1
+    return xl, i
 
 
-result = zarb(45)
-print(result)
+def main():
+    x = int(input("Give number : "))
+    xl, i = colats_core(x)
+    printo(xl, i)
+
+
+def printo(xl, i):
+
+    print("-" * 10)
+    print(f"Finish {xl} done in {i} step")
+
+
+if __name__ == "__main__":
+    main()
