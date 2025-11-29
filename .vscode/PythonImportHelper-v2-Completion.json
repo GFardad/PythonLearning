@@ -148,7 +148,7 @@
         "kind": 5,
         "importPath": "E1.P12.P12",
         "description": "E1.P12.P12",
-        "peekOfCode": "moz = random.randint(0, 10*365*24*3600)\n# moz = 3650\ntime_s = moz\n# if time_s > 365*24*3600:\ny = time_s // 365 * 24 * 3600\ntime_s = time_s % 365 * 24 * 3600\n# print(time_s)\n# if time_s > 24 * 3600:\nd = time_s // 86400\ntime_s = time_s % 24 * 3600",
+        "peekOfCode": "moz = random.randint(0, 10 * 365 * 24 * 3600)\ntime_s = moz\ny = time_s // 365 * 24 * 3600\ntime_s = time_s % 365 * 24 * 3600\nd = time_s // 86400\ntime_s = time_s % 24 * 3600\nh = time_s // 3600\ntime_s = time_s % 3600\nm = time_s // 60\ntime_s = time_s % 60",
         "detail": "E1.P12.P12",
         "documentation": {}
     },
@@ -157,7 +157,7 @@
         "kind": 5,
         "importPath": "E1.P12.P12",
         "description": "E1.P12.P12",
-        "peekOfCode": "time_s = moz\n# if time_s > 365*24*3600:\ny = time_s // 365 * 24 * 3600\ntime_s = time_s % 365 * 24 * 3600\n# print(time_s)\n# if time_s > 24 * 3600:\nd = time_s // 86400\ntime_s = time_s % 24 * 3600\n# print(time_s)\n# if time_s > 3600:",
+        "peekOfCode": "time_s = moz\ny = time_s // 365 * 24 * 3600\ntime_s = time_s % 365 * 24 * 3600\nd = time_s // 86400\ntime_s = time_s % 24 * 3600\nh = time_s // 3600\ntime_s = time_s % 3600\nm = time_s // 60\ntime_s = time_s % 60\nprint(",
         "detail": "E1.P12.P12",
         "documentation": {}
     },
@@ -166,7 +166,7 @@
         "kind": 5,
         "importPath": "E1.P12.P12",
         "description": "E1.P12.P12",
-        "peekOfCode": "y = time_s // 365 * 24 * 3600\ntime_s = time_s % 365 * 24 * 3600\n# print(time_s)\n# if time_s > 24 * 3600:\nd = time_s // 86400\ntime_s = time_s % 24 * 3600\n# print(time_s)\n# if time_s > 3600:\nh = time_s // 3600\ntime_s = time_s % 3600",
+        "peekOfCode": "y = time_s // 365 * 24 * 3600\ntime_s = time_s % 365 * 24 * 3600\nd = time_s // 86400\ntime_s = time_s % 24 * 3600\nh = time_s // 3600\ntime_s = time_s % 3600\nm = time_s // 60\ntime_s = time_s % 60\nprint(\n    f\"{moz} seconde is => year : -{y}- | day : -{d}- | hour : -{h}- | minente : -{m}- seconde : -{time_s}-\"",
         "detail": "E1.P12.P12",
         "documentation": {}
     },
@@ -175,7 +175,7 @@
         "kind": 5,
         "importPath": "E1.P12.P12",
         "description": "E1.P12.P12",
-        "peekOfCode": "time_s = time_s % 365 * 24 * 3600\n# print(time_s)\n# if time_s > 24 * 3600:\nd = time_s // 86400\ntime_s = time_s % 24 * 3600\n# print(time_s)\n# if time_s > 3600:\nh = time_s // 3600\ntime_s = time_s % 3600\n# print(time_s)",
+        "peekOfCode": "time_s = time_s % 365 * 24 * 3600\nd = time_s // 86400\ntime_s = time_s % 24 * 3600\nh = time_s // 3600\ntime_s = time_s % 3600\nm = time_s // 60\ntime_s = time_s % 60\nprint(\n    f\"{moz} seconde is => year : -{y}- | day : -{d}- | hour : -{h}- | minente : -{m}- seconde : -{time_s}-\"\n)",
         "detail": "E1.P12.P12",
         "documentation": {}
     },
@@ -184,7 +184,7 @@
         "kind": 5,
         "importPath": "E1.P12.P12",
         "description": "E1.P12.P12",
-        "peekOfCode": "d = time_s // 86400\ntime_s = time_s % 24 * 3600\n# print(time_s)\n# if time_s > 3600:\nh = time_s // 3600\ntime_s = time_s % 3600\n# print(time_s)\n# if time_s > 60:\nm = time_s // 60\ntime_s = time_s % 60",
+        "peekOfCode": "d = time_s // 86400\ntime_s = time_s % 24 * 3600\nh = time_s // 3600\ntime_s = time_s % 3600\nm = time_s // 60\ntime_s = time_s % 60\nprint(\n    f\"{moz} seconde is => year : -{y}- | day : -{d}- | hour : -{h}- | minente : -{m}- seconde : -{time_s}-\"\n)",
         "detail": "E1.P12.P12",
         "documentation": {}
     },
@@ -193,7 +193,7 @@
         "kind": 5,
         "importPath": "E1.P12.P12",
         "description": "E1.P12.P12",
-        "peekOfCode": "time_s = time_s % 24 * 3600\n# print(time_s)\n# if time_s > 3600:\nh = time_s // 3600\ntime_s = time_s % 3600\n# print(time_s)\n# if time_s > 60:\nm = time_s // 60\ntime_s = time_s % 60\n# print(time_s)",
+        "peekOfCode": "time_s = time_s % 24 * 3600\nh = time_s // 3600\ntime_s = time_s % 3600\nm = time_s // 60\ntime_s = time_s % 60\nprint(\n    f\"{moz} seconde is => year : -{y}- | day : -{d}- | hour : -{h}- | minente : -{m}- seconde : -{time_s}-\"\n)",
         "detail": "E1.P12.P12",
         "documentation": {}
     },
@@ -202,7 +202,7 @@
         "kind": 5,
         "importPath": "E1.P12.P12",
         "description": "E1.P12.P12",
-        "peekOfCode": "h = time_s // 3600\ntime_s = time_s % 3600\n# print(time_s)\n# if time_s > 60:\nm = time_s // 60\ntime_s = time_s % 60\n# print(time_s)\n# time_s = s / 60\n# time_s = time_s % 60\nprint(f\"{moz} seconde is => year : -{y}- | day : -{d}- | hour : -{h}- | minente : -{m}- seconde : -{time_s}-\")",
+        "peekOfCode": "h = time_s // 3600\ntime_s = time_s % 3600\nm = time_s // 60\ntime_s = time_s % 60\nprint(\n    f\"{moz} seconde is => year : -{y}- | day : -{d}- | hour : -{h}- | minente : -{m}- seconde : -{time_s}-\"\n)",
         "detail": "E1.P12.P12",
         "documentation": {}
     },
@@ -211,7 +211,7 @@
         "kind": 5,
         "importPath": "E1.P12.P12",
         "description": "E1.P12.P12",
-        "peekOfCode": "time_s = time_s % 3600\n# print(time_s)\n# if time_s > 60:\nm = time_s // 60\ntime_s = time_s % 60\n# print(time_s)\n# time_s = s / 60\n# time_s = time_s % 60\nprint(f\"{moz} seconde is => year : -{y}- | day : -{d}- | hour : -{h}- | minente : -{m}- seconde : -{time_s}-\")",
+        "peekOfCode": "time_s = time_s % 3600\nm = time_s // 60\ntime_s = time_s % 60\nprint(\n    f\"{moz} seconde is => year : -{y}- | day : -{d}- | hour : -{h}- | minente : -{m}- seconde : -{time_s}-\"\n)",
         "detail": "E1.P12.P12",
         "documentation": {}
     },
@@ -220,7 +220,7 @@
         "kind": 5,
         "importPath": "E1.P12.P12",
         "description": "E1.P12.P12",
-        "peekOfCode": "m = time_s // 60\ntime_s = time_s % 60\n# print(time_s)\n# time_s = s / 60\n# time_s = time_s % 60\nprint(f\"{moz} seconde is => year : -{y}- | day : -{d}- | hour : -{h}- | minente : -{m}- seconde : -{time_s}-\")",
+        "peekOfCode": "m = time_s // 60\ntime_s = time_s % 60\nprint(\n    f\"{moz} seconde is => year : -{y}- | day : -{d}- | hour : -{h}- | minente : -{m}- seconde : -{time_s}-\"\n)",
         "detail": "E1.P12.P12",
         "documentation": {}
     },
@@ -229,7 +229,7 @@
         "kind": 5,
         "importPath": "E1.P12.P12",
         "description": "E1.P12.P12",
-        "peekOfCode": "time_s = time_s % 60\n# print(time_s)\n# time_s = s / 60\n# time_s = time_s % 60\nprint(f\"{moz} seconde is => year : -{y}- | day : -{d}- | hour : -{h}- | minente : -{m}- seconde : -{time_s}-\")",
+        "peekOfCode": "time_s = time_s % 60\nprint(\n    f\"{moz} seconde is => year : -{y}- | day : -{d}- | hour : -{h}- | minente : -{m}- seconde : -{time_s}-\"\n)",
         "detail": "E1.P12.P12",
         "documentation": {}
     },
