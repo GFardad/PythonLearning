@@ -11,8 +11,8 @@ def cun():
         elif:
             one += 1
     if (ziro % 2) == 1:
-        print(omm)
+        print(one)
     else:
-        print(mmo)
+        print(ziro)
 
 cun()

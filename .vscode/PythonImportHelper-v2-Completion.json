@@ -18,6 +18,24 @@
         "documentation": {}
     },
     {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
         "label": "url",
         "kind": 5,
         "importPath": "E1.P1.P1",
@@ -364,7 +382,7 @@
         "kind": 2,
         "importPath": "E1.P7.P7",
         "description": "E1.P7.P7",
-        "peekOfCode": "def cun():\n    one = 0\n    ziro = 0\n    for i in inp:\n        if i == 0:\n            ziro += 1\n        elif:\n            one += 1\n    if (ziro % 2) == 1:\n        print(omm)",
+        "peekOfCode": "def cun():\n    one = 0\n    ziro = 0\n    for i in inp:\n        if i == 0:\n            ziro += 1\n        elif:\n            one += 1\n    if (ziro % 2) == 1:\n        print(one)",
         "detail": "E1.P7.P7",
         "documentation": {}
     },
@@ -375,6 +393,42 @@
         "description": "E1.P7.P7",
         "peekOfCode": "inp = bin(int(input(\"suckanigadick : \")))\ndef cun():\n    one = 0\n    ziro = 0\n    for i in inp:\n        if i == 0:\n            ziro += 1\n        elif:\n            one += 1\n    if (ziro % 2) == 1:",
         "detail": "E1.P7.P7",
+        "documentation": {}
+    },
+    {
+        "label": "fillera",
+        "kind": 2,
+        "importPath": "E2.P1.main",
+        "description": "E2.P1.main",
+        "peekOfCode": "def fillera(n):\n    for i in range(n):\n        if i%3 == 0 or i%5 == 0:\n            basemazrab.append(n)\n    return basemazrab\ndef mazrabyab(n):\n    for i in range(n):\nprint(fillera(4))",
+        "detail": "E2.P1.main",
+        "documentation": {}
+    },
+    {
+        "label": "mazrabyab",
+        "kind": 2,
+        "importPath": "E2.P1.main",
+        "description": "E2.P1.main",
+        "peekOfCode": "def mazrabyab(n):\n    for i in range(n):\nprint(fillera(4))",
+        "detail": "E2.P1.main",
+        "documentation": {}
+    },
+    {
+        "label": "basemazrab",
+        "kind": 5,
+        "importPath": "E2.P1.main",
+        "description": "E2.P1.main",
+        "peekOfCode": "basemazrab = []\ndef fillera(n):\n    for i in range(n):\n        if i%3 == 0 or i%5 == 0:\n            basemazrab.append(n)\n    return basemazrab\ndef mazrabyab(n):\n    for i in range(n):\nprint(fillera(4))",
+        "detail": "E2.P1.main",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "kind": 5,
+        "importPath": "E2.P2.main",
+        "description": "E2.P2.main",
+        "peekOfCode": "request = requests.get(\"https://www.digikala.com\")\nprint(request.status_code)",
+        "detail": "E2.P2.main",
         "documentation": {}
     }
 ]
