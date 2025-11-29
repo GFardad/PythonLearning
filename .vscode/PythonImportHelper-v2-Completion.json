@@ -238,7 +238,7 @@
         "kind": 5,
         "importPath": "E1.P17.Main",
         "description": "E1.P17.Main",
-        "peekOfCode": "a_list = [\"A\", \"B\", \"C\", \"D\"]\nb_list = [\"B\", \"C\"]\nresult = []\n# print((len(a_list)))\nfor a_item in a_list:\n    found_in_b = False\n        for b_item in b_list:\n            if a_item == b_item:\n                result.append(a_item)\n        else:",
+        "peekOfCode": "a_list = [\"A\", \"B\", \"C\", \"D\"]\nb_list = [\"B\", \"C\"]\nresult = []\ni = 0\nfor a_item in a_list:\n    found_in_b = False\n    for b_item in b_list:\n        if a_item == b_item:\n            found_in_b = True\n            break",
         "detail": "E1.P17.Main",
         "documentation": {}
     },
@@ -247,7 +247,7 @@
         "kind": 5,
         "importPath": "E1.P17.Main",
         "description": "E1.P17.Main",
-        "peekOfCode": "b_list = [\"B\", \"C\"]\nresult = []\n# print((len(a_list)))\nfor a_item in a_list:\n    found_in_b = False\n        for b_item in b_list:\n            if a_item == b_item:\n                result.append(a_item)\n        else:\n            i += 1",
+        "peekOfCode": "b_list = [\"B\", \"C\"]\nresult = []\ni = 0\nfor a_item in a_list:\n    found_in_b = False\n    for b_item in b_list:\n        if a_item == b_item:\n            found_in_b = True\n            break\n    if not found_in_b:",
         "detail": "E1.P17.Main",
         "documentation": {}
     },
@@ -256,7 +256,43 @@
         "kind": 5,
         "importPath": "E1.P17.Main",
         "description": "E1.P17.Main",
-        "peekOfCode": "result = []\n# print((len(a_list)))\nfor a_item in a_list:\n    found_in_b = False\n        for b_item in b_list:\n            if a_item == b_item:\n                result.append(a_item)\n        else:\n            i += 1\nprint(result)",
+        "peekOfCode": "result = []\ni = 0\nfor a_item in a_list:\n    found_in_b = False\n    for b_item in b_list:\n        if a_item == b_item:\n            found_in_b = True\n            break\n    if not found_in_b:\n        result.append(a_item)",
+        "detail": "E1.P17.Main",
+        "documentation": {}
+    },
+    {
+        "label": "i",
+        "kind": 5,
+        "importPath": "E1.P17.Main",
+        "description": "E1.P17.Main",
+        "peekOfCode": "i = 0\nfor a_item in a_list:\n    found_in_b = False\n    for b_item in b_list:\n        if a_item == b_item:\n            found_in_b = True\n            break\n    if not found_in_b:\n        result.append(a_item)\nprint(result)",
+        "detail": "E1.P17.Main",
+        "documentation": {}
+    },
+    {
+        "label": "a_list",
+        "kind": 5,
+        "importPath": "E1.P17.Main",
+        "description": "E1.P17.Main",
+        "peekOfCode": "a_list = [\"A\", \"B\", \"C\", \"D\"]\nb_list = [\"B\", \"C\"]\nresult = (set(a_list)) - (set(b_list))\nprint(sorted(result))",
+        "detail": "E1.P17.Main",
+        "documentation": {}
+    },
+    {
+        "label": "b_list",
+        "kind": 5,
+        "importPath": "E1.P17.Main",
+        "description": "E1.P17.Main",
+        "peekOfCode": "b_list = [\"B\", \"C\"]\nresult = (set(a_list)) - (set(b_list))\nprint(sorted(result))",
+        "detail": "E1.P17.Main",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "E1.P17.Main",
+        "description": "E1.P17.Main",
+        "peekOfCode": "result = (set(a_list)) - (set(b_list))\nprint(sorted(result))",
         "detail": "E1.P17.Main",
         "documentation": {}
     },
