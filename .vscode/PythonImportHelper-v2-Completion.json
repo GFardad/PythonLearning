@@ -400,25 +400,16 @@
         "kind": 2,
         "importPath": "E2.P1.main",
         "description": "E2.P1.main",
-        "peekOfCode": "def fillera(n):\n    for i in range(n):\n        if i%3 == 0 or i%5 == 0:\n            basemazrab.append(n)\n    return basemazrab\ndef mazrabyab(n):\n    for i in range(n):\nprint(fillera(4))",
+        "peekOfCode": "def fillera(n, *a):\n    if n < 0:\n        if len(a) == 0:\n            return 0\n        else:\n            not_valid_inp = \"not valid input, pls enter non negative intiger\", 0\n            return not_valid_inp\n    basemazrab = []\n    for i in range(n):\n        if i % 3 == 0 or i % 5 == 0:",
         "detail": "E2.P1.main",
         "documentation": {}
     },
     {
-        "label": "mazrabyab",
-        "kind": 2,
-        "importPath": "E2.P1.main",
-        "description": "E2.P1.main",
-        "peekOfCode": "def mazrabyab(n):\n    for i in range(n):\nprint(fillera(4))",
-        "detail": "E2.P1.main",
-        "documentation": {}
-    },
-    {
-        "label": "basemazrab",
+        "label": "result",
         "kind": 5,
         "importPath": "E2.P1.main",
         "description": "E2.P1.main",
-        "peekOfCode": "basemazrab = []\ndef fillera(n):\n    for i in range(n):\n        if i%3 == 0 or i%5 == 0:\n            basemazrab.append(n)\n    return basemazrab\ndef mazrabyab(n):\n    for i in range(n):\nprint(fillera(4))",
+        "peekOfCode": "result = fillera(10, 1)\nif type(result) == int:\n    print(result)\nelse:\n    print(f\" Sum is : {result[0]}, List is : {result[1]}\")",
         "detail": "E2.P1.main",
         "documentation": {}
     },
