@@ -8,7 +8,7 @@ def cun():
     for i in inp:
         if i == 0:
             ziro += 1
-        elif:
+        # elif:
             one += 1
     if (ziro % 2) == 1:
         print(one)
