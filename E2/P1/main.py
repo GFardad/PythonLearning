@@ -22,4 +22,4 @@ result = fillera(10, 1)
 if type(result) == int:
     print(result)
 else:
-    print(f" Sum is : {result[0]}, List is : {result[1]}")
+    print(f" Sum is : {result[0]}, List is : {result[1]}") # type: ignore

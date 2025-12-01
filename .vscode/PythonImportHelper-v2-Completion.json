@@ -409,7 +409,7 @@
         "kind": 5,
         "importPath": "E2.P1.main",
         "description": "E2.P1.main",
-        "peekOfCode": "result = fillera(10, 1)\nif type(result) == int:\n    print(result)\nelse:\n    print(f\" Sum is : {result[0]}, List is : {result[1]}\")",
+        "peekOfCode": "result = fillera(10, 1)\nif type(result) == int:\n    print(result)\nelse:\n    print(f\" Sum is : {result[0]}, List is : {result[1]}\") # type: ignore",
         "detail": "E2.P1.main",
         "documentation": {}
     },
