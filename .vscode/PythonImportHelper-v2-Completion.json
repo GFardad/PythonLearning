@@ -448,5 +448,104 @@
         "peekOfCode": "request = requests.get(\"https://www.digikala.com\")\nprint(request.status_code)",
         "detail": "E2.P2.main",
         "documentation": {}
+    },
+    {
+        "label": "list_Moz",
+        "kind": 5,
+        "importPath": "E2.P5.main",
+        "description": "E2.P5.main",
+        "peekOfCode": "list_Moz = [\n    \"North\",\n    \"West\",\n    \"North\",\n    \"South\",\n    \"East\",\n    \"East\",\n    \"West\",\n    \"North\",\n    \"South\",",
+        "detail": "E2.P5.main",
+        "documentation": {}
+    },
+    {
+        "label": "Result",
+        "kind": 5,
+        "importPath": "E2.P5.main",
+        "description": "E2.P5.main",
+        "peekOfCode": "Result = []\nfor i in range(1, len(list_Moz)):\n    if list_Moz[i] == \"North\":\n        if list_Moz[i - 1] != \"South\":\n            Result.append(list_Moz[i])\n            print(\"N\")\n        else:\n            Result.pop()\n    if list_Moz[i] == \"West\":\n        if list_Moz[i - 1] != \"East\":",
+        "detail": "E2.P5.main",
+        "documentation": {}
+    },
+    {
+        "label": "moz",
+        "kind": 2,
+        "importPath": "E2.P6.main",
+        "description": "E2.P6.main",
+        "peekOfCode": "def moz(inputint):\n    # for i in range(2, inputint):\n        Fn[i] = moz(i-1) + moz(i-2)\n        return Fn[i]\ninputint = int(input())\nprint(moz(inputint))",
+        "detail": "E2.P6.main",
+        "documentation": {}
+    },
+    {
+        "label": "Fn",
+        "kind": 5,
+        "importPath": "E2.P6.main",
+        "description": "E2.P6.main",
+        "peekOfCode": "Fn = [0,1]\ndef moz(inputint):\n    # for i in range(2, inputint):\n        Fn[i] = moz(i-1) + moz(i-2)\n        return Fn[i]\ninputint = int(input())\nprint(moz(inputint))",
+        "detail": "E2.P6.main",
+        "documentation": {}
+    },
+    {
+        "label": "inputint",
+        "kind": 5,
+        "importPath": "E2.P6.main",
+        "description": "E2.P6.main",
+        "peekOfCode": "inputint = int(input())\nprint(moz(inputint))",
+        "detail": "E2.P6.main",
+        "documentation": {}
+    },
+    {
+        "label": "BOLD",
+        "kind": 5,
+        "importPath": "termonal_style_package.termonal_style.styles",
+        "description": "termonal_style_package.termonal_style.styles",
+        "peekOfCode": "BOLD = \"\\033[1m\"\nEND = \"\\033[0m\"  # کد پایان دهنده که باید بعد از متن فرمت شده استفاده شود\n# کدها برای رنگ‌های متن (Text Colors)\nRED = \"\\033[91m\"\nGREEN = \"\\033[92m\"\nYELLOW = \"\\033[93m\"\nBLUE = \"\\033[94m\"",
+        "detail": "termonal_style_package.termonal_style.styles",
+        "documentation": {}
+    },
+    {
+        "label": "END",
+        "kind": 5,
+        "importPath": "termonal_style_package.termonal_style.styles",
+        "description": "termonal_style_package.termonal_style.styles",
+        "peekOfCode": "END = \"\\033[0m\"  # کد پایان دهنده که باید بعد از متن فرمت شده استفاده شود\n# کدها برای رنگ‌های متن (Text Colors)\nRED = \"\\033[91m\"\nGREEN = \"\\033[92m\"\nYELLOW = \"\\033[93m\"\nBLUE = \"\\033[94m\"",
+        "detail": "termonal_style_package.termonal_style.styles",
+        "documentation": {}
+    },
+    {
+        "label": "RED",
+        "kind": 5,
+        "importPath": "termonal_style_package.termonal_style.styles",
+        "description": "termonal_style_package.termonal_style.styles",
+        "peekOfCode": "RED = \"\\033[91m\"\nGREEN = \"\\033[92m\"\nYELLOW = \"\\033[93m\"\nBLUE = \"\\033[94m\"",
+        "detail": "termonal_style_package.termonal_style.styles",
+        "documentation": {}
+    },
+    {
+        "label": "GREEN",
+        "kind": 5,
+        "importPath": "termonal_style_package.termonal_style.styles",
+        "description": "termonal_style_package.termonal_style.styles",
+        "peekOfCode": "GREEN = \"\\033[92m\"\nYELLOW = \"\\033[93m\"\nBLUE = \"\\033[94m\"",
+        "detail": "termonal_style_package.termonal_style.styles",
+        "documentation": {}
+    },
+    {
+        "label": "YELLOW",
+        "kind": 5,
+        "importPath": "termonal_style_package.termonal_style.styles",
+        "description": "termonal_style_package.termonal_style.styles",
+        "peekOfCode": "YELLOW = \"\\033[93m\"\nBLUE = \"\\033[94m\"",
+        "detail": "termonal_style_package.termonal_style.styles",
+        "documentation": {}
+    },
+    {
+        "label": "BLUE",
+        "kind": 5,
+        "importPath": "termonal_style_package.termonal_style.styles",
+        "description": "termonal_style_package.termonal_style.styles",
+        "peekOfCode": "BLUE = \"\\033[94m\"",
+        "detail": "termonal_style_package.termonal_style.styles",
+        "documentation": {}
     }
 ]
