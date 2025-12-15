@@ -1,6 +1,18 @@
-import re
-import requests
+def sum_of_dijets(x):
+    y = 0
+    x_list = []
+    if len(str(x)) == 1:
+        return x
 
-request = requests.get("https://www.digikala.com")
+    map(lambda d: x_list.append(str(x)[d]), range(len(str(x))))
+    # print(x_list)
+    x = sum(x_list)
+    if len(str(x)) == 1:
+        return x
+    else:
+        # y+=1
+        sum_of_dijets(x)
 
-print(request.status_code)
+
+inpUser = int(input("Give me a number : "))
+print(sum_of_dijets(inpUser))

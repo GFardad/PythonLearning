@@ -1,0 +1,13 @@
+f = open("Mini/data.txt", mode="w+")
+f.write("jagh bezan shir Pesar \n afriiin!!!")
+f.close
+f.read
+print("moz")
+
+
+a = "moz"
+b = "jagh"
+print(a * 3)  # type: ignore
+print(b * 3)  # type: ignore
+print(a * b)  # type: ignore
+
