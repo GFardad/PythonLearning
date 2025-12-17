@@ -432,21 +432,75 @@
         "documentation": {}
     },
     {
-        "label": "sum_of_dijets",
+        "label": "C2",
+        "kind": 2,
+        "importPath": "E2.P11.main",
+        "description": "E2.P11.main",
+        "peekOfCode": "def C2I (inp_string: str):\n    char = inp_string[0]\n    num = inp_string[1]\n    char = ((ord(char.lower())) - (ord(\"a\")))\n    return(int(char),int(num)-1)\ndef calc_offset(x,y):\n    offset = [[x+2,y+1],[x+2,y-1],[x-2,y+1],[x-2,y-1],[x+1,y+2],[x+1,y-2],[x-1,y+2],[x-1,y-2]]\n    offset_t = [tuple(tuple(item)) for item in offset]\n    return tuple(offset_t)\ndef validator(new_points):",
+        "detail": "E2.P11.main",
+        "documentation": {}
+    },
+    {
+        "label": "calc_offset",
+        "kind": 2,
+        "importPath": "E2.P11.main",
+        "description": "E2.P11.main",
+        "peekOfCode": "def calc_offset(x,y):\n    offset = [[x+2,y+1],[x+2,y-1],[x-2,y+1],[x-2,y-1],[x+1,y+2],[x+1,y-2],[x-1,y+2],[x-1,y-2]]\n    offset_t = [tuple(tuple(item)) for item in offset]\n    return tuple(offset_t)\ndef validator(new_points):\n    global visited\n    for point in new_points:\n    visited.add(new_points)\n    print(visited)\nprint(validator(calc_offset(*C2I(\"A3\"))))",
+        "detail": "E2.P11.main",
+        "documentation": {}
+    },
+    {
+        "label": "validator",
+        "kind": 2,
+        "importPath": "E2.P11.main",
+        "description": "E2.P11.main",
+        "peekOfCode": "def validator(new_points):\n    global visited\n    for point in new_points:\n    visited.add(new_points)\n    print(visited)\nprint(validator(calc_offset(*C2I(\"A3\"))))",
+        "detail": "E2.P11.main",
+        "documentation": {}
+    },
+    {
+        "label": "visited",
+        "kind": 5,
+        "importPath": "E2.P11.main",
+        "description": "E2.P11.main",
+        "peekOfCode": "visited = set()\ndef C2I (inp_string: str):\n    char = inp_string[0]\n    num = inp_string[1]\n    char = ((ord(char.lower())) - (ord(\"a\")))\n    return(int(char),int(num)-1)\ndef calc_offset(x,y):\n    offset = [[x+2,y+1],[x+2,y-1],[x-2,y+1],[x-2,y-1],[x+1,y+2],[x+1,y-2],[x-1,y+2],[x-1,y-2]]\n    offset_t = [tuple(tuple(item)) for item in offset]\n    return tuple(offset_t)",
+        "detail": "E2.P11.main",
+        "documentation": {}
+    },
+    {
+        "label": "sum_of_digits",
         "kind": 2,
         "importPath": "E2.P2.main",
         "description": "E2.P2.main",
-        "peekOfCode": "def sum_of_dijets(x):\n    if len(str(x)) == 1:\n        return x\n    # y = 0\n    x_list = [int(x)[i] for i in range(len(str(j))),j]\n    print(x_list)\n    # x_intl = [int(x)[i] for i in range(len(str(x)))]\n    x = sum(x_list)\n    if len(str(x)) == 1:\n        return x",
+        "peekOfCode": "def sum_of_digits(x: int, step=0):\n    total = 0\n    if x < 10:\n        return x, step\n    while x > 0:\n        x, y = divmod(x, 10)\n        total = total + y\n    step += 1\n    return sum_of_digits(total, step)\ninp_user = abs(int(input(\"Give me a number : \")))",
         "detail": "E2.P2.main",
         "documentation": {}
     },
     {
-        "label": "inpUser",
+        "label": "inp_user",
         "kind": 5,
         "importPath": "E2.P2.main",
         "description": "E2.P2.main",
-        "peekOfCode": "inpUser = int(input(\"Give me a number : \"))\nprint(sum_of_dijets(inpUser))",
+        "peekOfCode": "inp_user = abs(int(input(\"Give me a number : \")))\ntotal_sum, step = sum_of_digits(inp_user)\nprint(f\"{total_sum} is {inp_user} diget sum \\n calced in {step} steps\")",
         "detail": "E2.P2.main",
+        "documentation": {}
+    },
+    {
+        "label": "match_liek",
+        "kind": 2,
+        "importPath": "E2.P3.main",
+        "description": "E2.P3.main",
+        "peekOfCode": "def match_liek(names):\n    match names:\n        case []:\n            return \"no one likes this\"\n        case [name1]:  \n            return f\"{name1} likes this\"\n        case [name1, name2]:  \n            return f\"{name1} and {name2} like this\"\n        case [name1, name2, name3]:  \n            return f\"{name1}, {name2} and {name3} like this\"",
+        "detail": "E2.P3.main",
+        "documentation": {}
+    },
+    {
+        "label": "like",
+        "kind": 5,
+        "importPath": "E2.P3.main",
+        "description": "E2.P3.main",
+        "peekOfCode": "like = [\"Peter\", \"Alex\", \"John\", \"Sarah\", \"Emily\"]\ndef match_liek(names):\n    match names:\n        case []:\n            return \"no one likes this\"\n        case [name1]:  \n            return f\"{name1} likes this\"\n        case [name1, name2]:  \n            return f\"{name1} and {name2} like this\"\n        case [name1, name2, name3]:  ",
+        "detail": "E2.P3.main",
         "documentation": {}
     },
     {
