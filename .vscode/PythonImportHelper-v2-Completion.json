@@ -436,7 +436,7 @@
         "kind": 2,
         "importPath": "E2.P2.main",
         "description": "E2.P2.main",
-        "peekOfCode": "def sum_of_dijets(x):\n    y = 0\n    x_list = []\n    if len(str(x)) == 1:\n        return x\n    map(lambda d: x_list.append(str(x)[d]), range(len(str(x))))\n    # print(x_list)\n    x = sum(x_list)\n    if len(str(x)) == 1:\n        return x",
+        "peekOfCode": "def sum_of_dijets(x):\n    if len(str(x)) == 1:\n        return x\n    # y = 0\n    x_list = [int(x)[i] for i in range(len(str(j))),j]\n    print(x_list)\n    # x_intl = [int(x)[i] for i in range(len(str(x)))]\n    x = sum(x_list)\n    if len(str(x)) == 1:\n        return x",
         "detail": "E2.P2.main",
         "documentation": {}
     },
