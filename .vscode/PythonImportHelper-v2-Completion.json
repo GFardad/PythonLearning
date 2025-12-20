@@ -51,6 +51,14 @@
         "documentation": {}
     },
     {
+        "label": "spliter",
+        "importPath": "E2.P11.main",
+        "description": "E2.P11.main",
+        "isExtraImport": true,
+        "detail": "E2.P11.main",
+        "documentation": {}
+    },
+    {
         "label": "url",
         "kind": 5,
         "importPath": "E1.P1.main",
@@ -467,36 +475,90 @@
     {
         "label": "C2I",
         "kind": 2,
-        "importPath": "E2.P11.main",
-        "description": "E2.P11.main",
+        "importPath": "E2.P10.main",
+        "description": "E2.P10.main",
         "peekOfCode": "def C2I(inp_string):\n    if type(inp_string) != str:\n        return inp_string\n    else:\n        char = inp_string[0]\n        num = inp_string[1]\n        char = (ord(char.lower())) - (ord(\"a\"))\n        return (int(char), int(num) - 1)\ndef calc_offset(x, y):\n    offset = [",
-        "detail": "E2.P11.main",
+        "detail": "E2.P10.main",
         "documentation": {}
     },
     {
         "label": "calc_offset",
         "kind": 2,
-        "importPath": "E2.P11.main",
-        "description": "E2.P11.main",
+        "importPath": "E2.P10.main",
+        "description": "E2.P10.main",
         "peekOfCode": "def calc_offset(x, y):\n    offset = [\n        [x + 2, y + 1],\n        [x + 2, y - 1],\n        [x - 2, y + 1],\n        [x - 2, y - 1],\n        [x + 1, y + 2],\n        [x + 1, y - 2],\n        [x - 1, y + 2],\n        [x - 1, y - 2],",
-        "detail": "E2.P11.main",
+        "detail": "E2.P10.main",
         "documentation": {}
     },
     {
         "label": "validator",
         "kind": 2,
-        "importPath": "E2.P11.main",
-        "description": "E2.P11.main",
+        "importPath": "E2.P10.main",
+        "description": "E2.P10.main",
         "peekOfCode": "def validator(new_points):\n    global visited\n    global index\n    clean_new_point = []\n    for item in new_points:\n        if item[0] <= 7 and item[1] <= 7 and item[0] >= 0 and item[1] >= 0:\n            clean_new_point.append(item)\n    clean_new_point = set(clean_new_point) - visited\n    visited.update(clean_new_point)\n    index += 1",
-        "detail": "E2.P11.main",
+        "detail": "E2.P10.main",
         "documentation": {}
     },
     {
         "label": "main",
         "kind": 2,
+        "importPath": "E2.P10.main",
+        "description": "E2.P10.main",
+        "peekOfCode": "def main(local_start_point, index):\n    new_point = calc_offset(*local_start_point)\ndef solve(start_cord, stop_cord):\n    start_cord = C2I(start_cord)\n    stop_cord = C2I(stop_cord)\n    queue = [((start_cord), 0)]\n    while queue:\n        cordinate, dist = queue.pop(0)\n        if cordinate == stop_cord:\n            return dist",
+        "detail": "E2.P10.main",
+        "documentation": {}
+    },
+    {
+        "label": "solve",
+        "kind": 2,
+        "importPath": "E2.P10.main",
+        "description": "E2.P10.main",
+        "peekOfCode": "def solve(start_cord, stop_cord):\n    start_cord = C2I(start_cord)\n    stop_cord = C2I(stop_cord)\n    queue = [((start_cord), 0)]\n    while queue:\n        cordinate, dist = queue.pop(0)\n        if cordinate == stop_cord:\n            return dist\n        next_moves = validator(calc_offset(*cordinate))\n        for next_move in next_moves:",
+        "detail": "E2.P10.main",
+        "documentation": {}
+    },
+    {
+        "label": "visited",
+        "kind": 5,
+        "importPath": "E2.P10.main",
+        "description": "E2.P10.main",
+        "peekOfCode": "visited = set()\nindex = 0\ndef C2I(inp_string):\n    if type(inp_string) != str:\n        return inp_string\n    else:\n        char = inp_string[0]\n        num = inp_string[1]\n        char = (ord(char.lower())) - (ord(\"a\"))\n        return (int(char), int(num) - 1)",
+        "detail": "E2.P10.main",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 5,
+        "importPath": "E2.P10.main",
+        "description": "E2.P10.main",
+        "peekOfCode": "index = 0\ndef C2I(inp_string):\n    if type(inp_string) != str:\n        return inp_string\n    else:\n        char = inp_string[0]\n        num = inp_string[1]\n        char = (ord(char.lower())) - (ord(\"a\"))\n        return (int(char), int(num) - 1)\ndef calc_offset(x, y):",
+        "detail": "E2.P10.main",
+        "documentation": {}
+    },
+    {
+        "label": "start",
+        "kind": 5,
+        "importPath": "E2.P10.main",
+        "description": "E2.P10.main",
+        "peekOfCode": "start = input(\"Give me a number for starting point of BSF : \")\nstop = input(\"Give me a number for targrt point of BSF : \")\nif C2I(start) == C2I(stop):\n    print(\n        f\"strat and stop point are same! both of them is {stop.upper()} \\nu wana go whare?\"\n    )\nelse:\n    result = solve(start, stop)\n    print(f\"shortest path bitwhin {start.upper()} and {stop.upper()} is {result}\")",
+        "detail": "E2.P10.main",
+        "documentation": {}
+    },
+    {
+        "label": "stop",
+        "kind": 5,
+        "importPath": "E2.P10.main",
+        "description": "E2.P10.main",
+        "peekOfCode": "stop = input(\"Give me a number for targrt point of BSF : \")\nif C2I(start) == C2I(stop):\n    print(\n        f\"strat and stop point are same! both of them is {stop.upper()} \\nu wana go whare?\"\n    )\nelse:\n    result = solve(start, stop)\n    print(f\"shortest path bitwhin {start.upper()} and {stop.upper()} is {result}\")",
+        "detail": "E2.P10.main",
+        "documentation": {}
+    },
+    {
+        "label": "spliter",
+        "kind": 2,
         "importPath": "E2.P11.main",
         "description": "E2.P11.main",
-        "peekOfCode": "def main(local_start_point, index):\n    new_point = calc_offset(*local_start_point)\ndef solve(start_cord, stop_cord):\n    start_cord = C2I(start_cord)\n    stop_cord = C2I(stop_cord)\n    queue = [((start_cord), 0)]\n    while queue:\n        cordinate, dist = queue.pop(0)\n        if cordinate == stop_cord:\n            return dist",
+        "peekOfCode": "def spliter():\n    status_list = game_status.split(\" \")\n    return status_list\ndef solve(status_list):\n    result = 0\n    for curr, i in zip(status_list, range(len(status_list))):\n        # next_frame_sper = sts(status_list[i + 1][0])\n        next_frame_full = status_list[i + 1]\n        if \"X\" in curr:\n            if \"/\" in (status_list[i + 1]):",
         "detail": "E2.P11.main",
         "documentation": {}
     },
@@ -505,52 +567,25 @@
         "kind": 2,
         "importPath": "E2.P11.main",
         "description": "E2.P11.main",
-        "peekOfCode": "def solve(start_cord, stop_cord):\n    start_cord = C2I(start_cord)\n    stop_cord = C2I(stop_cord)\n    queue = [((start_cord), 0)]\n    while queue:\n        cordinate, dist = queue.pop(0)\n        if cordinate == stop_cord:\n            return dist\n        next_moves = validator(calc_offset(*cordinate))\n        for next_move in next_moves:",
+        "peekOfCode": "def solve(status_list):\n    result = 0\n    for curr, i in zip(status_list, range(len(status_list))):\n        # next_frame_sper = sts(status_list[i + 1][0])\n        next_frame_full = status_list[i + 1]\n        if \"X\" in curr:\n            if \"/\" in (status_list[i + 1]):\n                result = result + sts(curr, next_frame_full)\n            else:\n                result = result + sts(curr, next_frame_full)",
         "detail": "E2.P11.main",
         "documentation": {}
     },
     {
-        "label": "visited",
-        "kind": 5,
+        "label": "sts",
+        "kind": 2,
         "importPath": "E2.P11.main",
         "description": "E2.P11.main",
-        "peekOfCode": "visited = set()\nindex = 0\ndef C2I(inp_string):\n    if type(inp_string) != str:\n        return inp_string\n    else:\n        char = inp_string[0]\n        num = inp_string[1]\n        char = (ord(char.lower())) - (ord(\"a\"))\n        return (int(char), int(num) - 1)",
+        "peekOfCode": "def sts(inp, next_frame):\n    if len(inp) == 2:\n        sepprated_number = [str(inp)[i] for i in range(len(str(inp)))]\n    if \"X\" in inp:\n        return 10\n    elif \"/\" in inp:\n    return int()",
         "detail": "E2.P11.main",
         "documentation": {}
     },
     {
-        "label": "index",
+        "label": "game_status",
         "kind": 5,
         "importPath": "E2.P11.main",
         "description": "E2.P11.main",
-        "peekOfCode": "index = 0\ndef C2I(inp_string):\n    if type(inp_string) != str:\n        return inp_string\n    else:\n        char = inp_string[0]\n        num = inp_string[1]\n        char = (ord(char.lower())) - (ord(\"a\"))\n        return (int(char), int(num) - 1)\ndef calc_offset(x, y):",
-        "detail": "E2.P11.main",
-        "documentation": {}
-    },
-    {
-        "label": "start",
-        "kind": 5,
-        "importPath": "E2.P11.main",
-        "description": "E2.P11.main",
-        "peekOfCode": "start = input(\"Give me a number for starting point of BSF : \")\nstop = input(\"Give me a number for targrt point of BSF : \")\nresult = solve(start, stop)\nprint(f\"shortest path bitwhin {start.upper()} and {stop.upper()} is {result}\")",
-        "detail": "E2.P11.main",
-        "documentation": {}
-    },
-    {
-        "label": "stop",
-        "kind": 5,
-        "importPath": "E2.P11.main",
-        "description": "E2.P11.main",
-        "peekOfCode": "stop = input(\"Give me a number for targrt point of BSF : \")\nresult = solve(start, stop)\nprint(f\"shortest path bitwhin {start.upper()} and {stop.upper()} is {result}\")",
-        "detail": "E2.P11.main",
-        "documentation": {}
-    },
-    {
-        "label": "result",
-        "kind": 5,
-        "importPath": "E2.P11.main",
-        "description": "E2.P11.main",
-        "peekOfCode": "result = solve(start, stop)\nprint(f\"shortest path bitwhin {start.upper()} and {stop.upper()} is {result}\")",
+        "peekOfCode": "game_status = \"X 7/ 90 X X 8/ 23 6/ X 8/1\"\ndef spliter():\n    status_list = game_status.split(\" \")\n    return status_list\ndef solve(status_list):\n    result = 0\n    for curr, i in zip(status_list, range(len(status_list))):\n        # next_frame_sper = sts(status_list[i + 1][0])\n        next_frame_full = status_list[i + 1]\n        if \"X\" in curr:",
         "detail": "E2.P11.main",
         "documentation": {}
     },
