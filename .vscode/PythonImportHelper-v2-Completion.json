@@ -51,14 +51,6 @@
         "documentation": {}
     },
     {
-        "label": "spliter",
-        "importPath": "E2.P11.main",
-        "description": "E2.P11.main",
-        "isExtraImport": true,
-        "detail": "E2.P11.main",
-        "documentation": {}
-    },
-    {
         "label": "url",
         "kind": 5,
         "importPath": "E1.P1.main",
@@ -668,6 +660,33 @@
         "description": "E2.P6.main",
         "peekOfCode": "inputint = int(input())\nprint(moz(inputint))",
         "detail": "E2.P6.main",
+        "documentation": {}
+    },
+    {
+        "label": "vehicle",
+        "kind": 6,
+        "importPath": "E3.Ex 1.main",
+        "description": "E3.Ex 1.main",
+        "peekOfCode": "class vehicle:\n    def __init__(self, max_speed, milage, prod_year, brand):\n        self.max_speed = 120\n        self.milage = 0\n        self.prod_year = 2000\n        self.brand = \"benz\"\n    def age_calc(self, prod_year=self.prod_year):\n        return (2025) - (prod_year)\nclass bus(vehicle):\n    def set_capacity(self, capacity):",
+        "detail": "E3.Ex 1.main",
+        "documentation": {}
+    },
+    {
+        "label": "bus",
+        "kind": 6,
+        "importPath": "E3.Ex 1.main",
+        "description": "E3.Ex 1.main",
+        "peekOfCode": "class bus(vehicle):\n    def set_capacity(self, capacity):\n        self.seatting_capacity = 100\nbus1 = bus(max_speed=100, milage=250, prod_year=2010, brand=\"Kos\")\nprint(bus1.age_calc())",
+        "detail": "E3.Ex 1.main",
+        "documentation": {}
+    },
+    {
+        "label": "bus1",
+        "kind": 5,
+        "importPath": "E3.Ex 1.main",
+        "description": "E3.Ex 1.main",
+        "peekOfCode": "bus1 = bus(max_speed=100, milage=250, prod_year=2010, brand=\"Kos\")\nprint(bus1.age_calc())",
+        "detail": "E3.Ex 1.main",
         "documentation": {}
     },
     {

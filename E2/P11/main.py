@@ -1,5 +1,3 @@
-from E2.P11.main import spliter
-
 game_status = "X 7/ 90 X X 8/ 23 6/ X 8/1"
 
 
