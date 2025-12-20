@@ -18,6 +18,39 @@
         "documentation": {}
     },
     {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "start",
+        "importPath": "tracemalloc",
+        "description": "tracemalloc",
+        "isExtraImport": true,
+        "detail": "tracemalloc",
+        "documentation": {}
+    },
+    {
+        "label": "stop",
+        "importPath": "tracemalloc",
+        "description": "tracemalloc",
+        "isExtraImport": true,
+        "detail": "tracemalloc",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "importPath": "unittest",
+        "description": "unittest",
+        "isExtraImport": true,
+        "detail": "unittest",
+        "documentation": {}
+    },
+    {
         "label": "url",
         "kind": 5,
         "importPath": "E1.P1.main",
@@ -432,11 +465,11 @@
         "documentation": {}
     },
     {
-        "label": "C2",
+        "label": "C2I",
         "kind": 2,
         "importPath": "E2.P11.main",
         "description": "E2.P11.main",
-        "peekOfCode": "def C2I (inp_string: str):\n    char = inp_string[0]\n    num = inp_string[1]\n    char = ((ord(char.lower())) - (ord(\"a\")))\n    return(int(char),int(num)-1)\ndef calc_offset(x,y):\n    offset = [[x+2,y+1],[x+2,y-1],[x-2,y+1],[x-2,y-1],[x+1,y+2],[x+1,y-2],[x-1,y+2],[x-1,y-2]]\n    offset_t = [tuple(tuple(item)) for item in offset]\n    return tuple(offset_t)\ndef validator(new_points):",
+        "peekOfCode": "def C2I(inp_string):\n    if type(inp_string) != str:\n        return inp_string\n    else:\n        char = inp_string[0]\n        num = inp_string[1]\n        char = (ord(char.lower())) - (ord(\"a\"))\n        return (int(char), int(num) - 1)\ndef calc_offset(x, y):\n    offset = [",
         "detail": "E2.P11.main",
         "documentation": {}
     },
@@ -445,7 +478,7 @@
         "kind": 2,
         "importPath": "E2.P11.main",
         "description": "E2.P11.main",
-        "peekOfCode": "def calc_offset(x,y):\n    offset = [[x+2,y+1],[x+2,y-1],[x-2,y+1],[x-2,y-1],[x+1,y+2],[x+1,y-2],[x-1,y+2],[x-1,y-2]]\n    offset_t = [tuple(tuple(item)) for item in offset]\n    return tuple(offset_t)\ndef validator(new_points):\n    global visited\n    for point in new_points:\n    visited.add(new_points)\n    print(visited)\nprint(validator(calc_offset(*C2I(\"A3\"))))",
+        "peekOfCode": "def calc_offset(x, y):\n    offset = [\n        [x + 2, y + 1],\n        [x + 2, y - 1],\n        [x - 2, y + 1],\n        [x - 2, y - 1],\n        [x + 1, y + 2],\n        [x + 1, y - 2],\n        [x - 1, y + 2],\n        [x - 1, y - 2],",
         "detail": "E2.P11.main",
         "documentation": {}
     },
@@ -454,7 +487,25 @@
         "kind": 2,
         "importPath": "E2.P11.main",
         "description": "E2.P11.main",
-        "peekOfCode": "def validator(new_points):\n    global visited\n    for point in new_points:\n    visited.add(new_points)\n    print(visited)\nprint(validator(calc_offset(*C2I(\"A3\"))))",
+        "peekOfCode": "def validator(new_points):\n    global visited\n    global index\n    clean_new_point = []\n    for item in new_points:\n        if item[0] <= 7 and item[1] <= 7 and item[0] >= 0 and item[1] >= 0:\n            clean_new_point.append(item)\n    clean_new_point = set(clean_new_point) - visited\n    visited.update(clean_new_point)\n    index += 1",
+        "detail": "E2.P11.main",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "E2.P11.main",
+        "description": "E2.P11.main",
+        "peekOfCode": "def main(local_start_point, index):\n    new_point = calc_offset(*local_start_point)\ndef solve(start_cord, stop_cord):\n    start_cord = C2I(start_cord)\n    stop_cord = C2I(stop_cord)\n    queue = [((start_cord), 0)]\n    while queue:\n        cordinate, dist = queue.pop(0)\n        if cordinate == stop_cord:\n            return dist",
+        "detail": "E2.P11.main",
+        "documentation": {}
+    },
+    {
+        "label": "solve",
+        "kind": 2,
+        "importPath": "E2.P11.main",
+        "description": "E2.P11.main",
+        "peekOfCode": "def solve(start_cord, stop_cord):\n    start_cord = C2I(start_cord)\n    stop_cord = C2I(stop_cord)\n    queue = [((start_cord), 0)]\n    while queue:\n        cordinate, dist = queue.pop(0)\n        if cordinate == stop_cord:\n            return dist\n        next_moves = validator(calc_offset(*cordinate))\n        for next_move in next_moves:",
         "detail": "E2.P11.main",
         "documentation": {}
     },
@@ -463,7 +514,43 @@
         "kind": 5,
         "importPath": "E2.P11.main",
         "description": "E2.P11.main",
-        "peekOfCode": "visited = set()\ndef C2I (inp_string: str):\n    char = inp_string[0]\n    num = inp_string[1]\n    char = ((ord(char.lower())) - (ord(\"a\")))\n    return(int(char),int(num)-1)\ndef calc_offset(x,y):\n    offset = [[x+2,y+1],[x+2,y-1],[x-2,y+1],[x-2,y-1],[x+1,y+2],[x+1,y-2],[x-1,y+2],[x-1,y-2]]\n    offset_t = [tuple(tuple(item)) for item in offset]\n    return tuple(offset_t)",
+        "peekOfCode": "visited = set()\nindex = 0\ndef C2I(inp_string):\n    if type(inp_string) != str:\n        return inp_string\n    else:\n        char = inp_string[0]\n        num = inp_string[1]\n        char = (ord(char.lower())) - (ord(\"a\"))\n        return (int(char), int(num) - 1)",
+        "detail": "E2.P11.main",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 5,
+        "importPath": "E2.P11.main",
+        "description": "E2.P11.main",
+        "peekOfCode": "index = 0\ndef C2I(inp_string):\n    if type(inp_string) != str:\n        return inp_string\n    else:\n        char = inp_string[0]\n        num = inp_string[1]\n        char = (ord(char.lower())) - (ord(\"a\"))\n        return (int(char), int(num) - 1)\ndef calc_offset(x, y):",
+        "detail": "E2.P11.main",
+        "documentation": {}
+    },
+    {
+        "label": "start",
+        "kind": 5,
+        "importPath": "E2.P11.main",
+        "description": "E2.P11.main",
+        "peekOfCode": "start = input(\"Give me a number for starting point of BSF : \")\nstop = input(\"Give me a number for targrt point of BSF : \")\nresult = solve(start, stop)\nprint(f\"shortest path bitwhin {start.upper()} and {stop.upper()} is {result}\")",
+        "detail": "E2.P11.main",
+        "documentation": {}
+    },
+    {
+        "label": "stop",
+        "kind": 5,
+        "importPath": "E2.P11.main",
+        "description": "E2.P11.main",
+        "peekOfCode": "stop = input(\"Give me a number for targrt point of BSF : \")\nresult = solve(start, stop)\nprint(f\"shortest path bitwhin {start.upper()} and {stop.upper()} is {result}\")",
+        "detail": "E2.P11.main",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "E2.P11.main",
+        "description": "E2.P11.main",
+        "peekOfCode": "result = solve(start, stop)\nprint(f\"shortest path bitwhin {start.upper()} and {stop.upper()} is {result}\")",
         "detail": "E2.P11.main",
         "documentation": {}
     },
